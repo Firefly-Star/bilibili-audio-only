@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "B站 · 仅播放声音",
+  "version": "0.1.0",
+  "description": "只下载 B 站视频的音轨，不下载 1080P 画面：同一视频流量约降 90~97%。",
+  "permissions": ["tabs"],
+  "host_permissions": ["*://*.bilibili.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.bilibili.com/video/*"],
+      "js": ["main.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["*://www.bilibili.com/video/*"],
+      "js": ["isolated.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://live.bilibili.com/*"],
+      "js": ["live-audio.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    },
+    {
+      "matches": ["*://live.bilibili.com/*"],
+      "js": ["live.js"],
+      "css": ["content.css"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "B站 · 仅播放声音"
+  }
+}
