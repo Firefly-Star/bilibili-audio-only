@@ -1,4 +1,4 @@
-# B 站「仅播放声音」（bilibili-audio-only）
+﻿# B 站「仅播放声音」（bilibili-audio-only）
 
 > 只下载音轨，不下载画面。点播省 **≈90%**，直播省 **≈80%**。
 
@@ -67,7 +67,7 @@ https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo
 
 ## 安装
 
-1. 下载这个仓库（`git clone` 或右上角 Code → Download ZIP 后解压）；
+1. 下载这个仓库（`git clone`，或右上角 Code → Download ZIP，或到 [Releases](https://github.com/Firefly-Star/bilibili-audio-only/releases) 下打包好的 zip 解压）；
 2. 打开 `edge://extensions`（Chrome 用 `chrome://extensions`）；
 3. 打开右上角「开发人员模式」；
 4. 点「加载解压缩的扩展」，选择**本仓库根目录**（含 `manifest.json` 的那一层）。
@@ -106,3 +106,4 @@ popup.html/js    工具栏弹窗开关
 ## License
 
 [MIT](LICENSE)
+
